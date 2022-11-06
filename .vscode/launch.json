@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "https://mctaglia.github.io/AR/",
+            "request": "launch",
+            "url": "https://mctaglia.github.io/AR/"
+        }
+    ]
+}
