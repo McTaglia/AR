@@ -2,7 +2,7 @@
 import * as THREE from "./node_modules/three/build/three.module.js";
 
 // global scene values
-var btn, gl, glCanvas, camera, scene, renderer, cube;
+var btn, gl, glCanvas, camnpm install --save threeera, scene, renderer, cube;
 
 // global xr value
 var xrSession = null;
@@ -29,10 +29,11 @@ function loadScene() {
 				light.position.set( 0.5, 1, 0.25 );
                 scene.add( light );
 
-    var geometry = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
+    var geometry = new THREE.BoxBufferGeometry(0.05, 0.05, 0.05);
     var material = new THREE.MeshPhongMaterial({color: 0x89CFF0});
     cube = new THREE.Mesh( geometry, material );
-    cube.position.y = 0.2;
+    cube.position.y = 0.1;
+    cube.position.x = -4;
     scene.add( cube );
 
     // setup Three.js WebGL renderer
@@ -111,7 +112,7 @@ function render(time) {
         return;
     } else {
         time *= 0.001;
-        cube.translateY(0.2 * Math.sin(time) / 100);
+        //cube.translateY(0.2 * Math.sin(time) / 100);
         cube.rotateY(Math.PI / 180);
         renderer.render(scene, camera);
         //renderer.render(scene, camera);
